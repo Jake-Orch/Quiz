@@ -11,57 +11,59 @@
 </head>
 
 <body>
-    <div class="begin">
+    <p id="time"></p>
+    <div class="begin" id="begin">
         <h1>Welcome to the quiz</h1>
         <p>Press start to begin!</p>
         <button>START</button>
     </div>
-    <div class="box" id="question1">
-        <h2>Question 1</h2>
-        <ul>
-            <li>Answer 1</li>
-            <li>Answer 2</li>
-            <li>Answer 3</li>
-            <li>Answer 4</li>
-        </ul>
+    <div id="questions">
+        <div class="box" id="question1">
+            <h2>Question 1</h2>
+            <ul>
+                <li id="wrong" data-state="wrong">Answer 1</li>
+                <li id="wrong" data-state="wrong">Answer 2</li>
+                <li id="correct" data-state="correct">Answer 3</li>
+                <li id="wrong" data-state="wrong">Answer 4</li>
+            </ul>
+        </div>
+        <div class="box" id="question2">
+            <h2>Question 2</h2>
+            <ul>
+                <li id="correct" data-state="correct">Answer 1</li>
+                <li id="wrong" data-state="wrong">Answer 2</li>
+                <li id="wrong" data-state="wrong">Answer 3</li>
+                <li id="wrong" data-state="wrong">Answer 4</li>
+            </ul>
+        </div>
+        <div class="box" id="question3">
+            <h2>Question 3</h2>
+            <ul>
+                <li id="wrong" data-state="wrong">Answer 1</li>
+                <li id="correct" data-state="correct">Answer 2</li>
+                <li id="wrong" data-state="wrong">Answer 3</li>
+                <li id="wrong" data-state="wrong">Answer 4</li>
+            </ul>
+        </div>
+        <div class="box" id="question4">
+            <h2>Question 4</h2>
+            <ul>
+                <li id="wrong" data-state="wrong">Answer 1</li>
+                <li id="wrong" data-state="wrong">Answer 2</li>
+                <li id="wrong" data-state="wrong">Answer 3</li>
+                <li id="correct" data-state="correct">Answer 4</li>
+            </ul>
+        </div>
+        <div class="box" id="question5">
+            <h2>Question 5</h2>
+            <ul>
+                <li id="correct" data-state="correct">Answer 1</li>
+                <li id="wrong" data-state="wrong">Answer 2</li>
+                <li id="wrong" data-state="wrong">Answer 3</li>
+                <li id="wrong" data-state="wrong">Answer 4</li>
+            </ul>
+        </div>
     </div>
-    <div class="box" id="question2">
-        <h2>Question 2</h2>
-        <ul>
-            <li>Answer 1</li>
-            <li>Answer 2</li>
-            <li>Answer 3</li>
-            <li>Answer 4</li>
-        </ul>
-    </div>
-    <div class="box" id="question3">
-        <h2>Question 3</h2>
-        <ul>
-            <li>Answer 1</li>
-            <li>Answer 2</li>
-            <li>Answer 3</li>
-            <li>Answer 4</li>
-        </ul>
-    </div>
-    <div class="box" id="question4">
-        <h2>Question 4</h2>
-        <ul>
-            <li>Answer 1</li>
-            <li>Answer 2</li>
-            <li>Answer 3</li>
-            <li>Answer 4</li>
-        </ul>
-    </div>
-    <div class="box" id="question5">
-        <h2>Question 5</h2>
-        <ul>
-            <li>Answer 1</li>
-            <li>Answer 2</li>
-            <li>Answer 3</li>
-            <li>Answer 4</li>
-        </ul>
-    </div>
-
 
     <script src="./assets/script.js"></script>
 </body>
