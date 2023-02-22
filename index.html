@@ -50,8 +50,8 @@
             <ul>
                 <li id="wrong" data-state="wrong">Answer 1</li>
                 <li id="wrong" data-state="wrong">Answer 2</li>
-                <li id="wrong" data-state="wrong">Answer 3</li>
-                <li id="correct" data-state="correct">Answer 4</li>
+                <li id="correct" data-state="correct">Answer 3</li>
+                <li id="wrong" data-state="wrong">Answer 4</li>
             </ul>
         </div>
         <div class="box" id="question5">
@@ -64,8 +64,22 @@
             </ul>
         </div>
     </div>
-
-    <script src="./assets/script.js"></script>
+    <div class="clearfix">
+        <div class="form">
+            <h2 id="congradulations">Congradulations!!!</h2>
+            <a>Fill in the below form to save your score!</a>
+            <form method="POST">
+                <div class="input">
+                    <label for="initials">Initials</label>
+                    <input type="text" name="initials" id="initials" placeholder="J.O">
+                </div>
+                <div class="input">
+                    <label for="score">Score</label>
+                    <input type="text" name="score" id="score" placeholder="5">
+                </div>
+            </form><button id="save-info">Save Info</button>
+        </div>
+        <script src="./assets/script.js"></script>
 </body>
 
 </html>

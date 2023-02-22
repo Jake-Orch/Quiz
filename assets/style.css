@@ -66,11 +66,43 @@ ul {
 }
 
 li{
-    flex: 0 0 150px;
-    width: 150px;
-    margin: 30px 20px 60px 0;
+    flex: 0 0 122px;
+    padding: 10px;
+    margin: 30px 100px 60px 0;
+    background-color: #352c8a;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 3px;
 }
 
+.form {
+    display: none;
+    font-family: var(--font);
+    font-size: 30px;
+    margin: 80px;
+}
+
+#congradulations {
+    font-size: 40px;
+}
+
+label {
+    font-size: 15px;
+}
+
+#save-info {
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+    background-color: beige;
+    margin-top: 20px;
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 /*#question2,
 #question3,
 #question4,
