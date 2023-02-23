@@ -84,7 +84,7 @@ allQuestions.addEventListener('click', function (event) {
         target.setAttribute('style', 'background-color: green');
         setTimeout(function () {
             q5Correct(event);
-        }, 500)
+        }, 1000)
 
         console.log(scoreData);
     } else if (questionBox === question5 && state === "wrong") {
@@ -92,7 +92,7 @@ allQuestions.addEventListener('click', function (event) {
         target.setAttribute('style', 'background-color: red');
         setTimeout(function () {
             q5Incorrect(event);
-        }, 500)
+        }, 1000)
 
         console.log(scoreData);
     } else if (state === "correct") {
@@ -101,7 +101,7 @@ allQuestions.addEventListener('click', function (event) {
         target.setAttribute('style', 'background-color: green');
         setTimeout(function () {
             answerCorrect(event);
-        }, 500)
+        }, 1000)
 
         console.log(scoreData);
     } else if (state === "wrong") {
@@ -109,7 +109,7 @@ allQuestions.addEventListener('click', function (event) {
         target.setAttribute('style', 'background-color: red');
         setTimeout(function () {
             answerIncorrect(event);
-        }, 500)
+        }, 1000)
         console.log(scoreData);
     } else {
         return;
@@ -121,9 +121,5 @@ saveInfoBtn.addEventListener('click', function () {
         initials: initialsInput.value,
         score: scoreInput.value
     }
-    if (initialsInput.value != scoreData) {
-        alert('Be honest about your score, no-one likes a cheater');
-    } else {
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
-    }
 }); 
