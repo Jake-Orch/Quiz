@@ -3,5 +3,5 @@ In this project i was tasked with creating a quiz, in which the user can save th
 ## ScreenShot
 [imagew of webpage](assets/quiz.PNG)
 ## How to access the page
-Deployed Webpage: https://jake-orch.github.io/Quiz/
+Deployed Webpage: https://jake-orch.github.io/Quiz/  
 GitHub Repository: https://github.com/Jake-Orch/Quiz
