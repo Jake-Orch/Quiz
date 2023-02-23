@@ -36,6 +36,37 @@ function countDown() {
     }, 1000);
 }
 
+function answerCorrect(event) {
+    var target = event.target;
+    var questionBox = target.parentElement.parentElement;
+    questionBox.setAttribute('style', 'display: none');
+    questionBox.nextElementSibling.setAttribute('style', 'display: block');
+}
+
+function answerIncorrect(event) {
+    var target = event.target;
+    var questionBox = target.parentElement.parentElement;
+    timeLeft = timeLeft - 5;
+    questionBox.setAttribute('style', 'display: none');
+    questionBox.nextElementSibling.setAttribute('style', 'display: block');
+}
+
+function q5Correct(event) {
+    var target = event.target;
+    var questionBox = target.parentElement.parentElement;
+    questionBox.setAttribute('style', 'display: none');
+    formDiv.setAttribute('style', 'display: block');
+    timeLeft = 0;
+}
+
+function q5Incorrect(event) {
+    var target = event.target;
+    var questionBox = target.parentElement.parentElement;
+    questionBox.setAttribute('style', 'display: none');
+    formDiv.setAttribute('style', 'display: block');
+    timeLeft = 0;
+}
+
 beginBtn.addEventListener('click', function () {
     countDown()
     beginEl.setAttribute('style', 'display: none');
@@ -48,23 +79,40 @@ allQuestions.addEventListener('click', function (event) {
     var questionBox = target.parentElement.parentElement;
     const state = target.getAttribute('data-state');
     if (questionBox === question5 && state === "correct") {
+        event.stopPropagation();
         scoreData = scoreData + 1;
-        questionBox.setAttribute('style', 'display: none');
-        formDiv.setAttribute('style', 'display: block');
-        timeLeft = 0;
+        target.setAttribute('style', 'background-color: green');
+        setTimeout(function () {
+            q5Correct(event);
+        }, 500)
+
+        console.log(scoreData);
     } else if (questionBox === question5 && state === "wrong") {
-        timeLeft = timeLeft - 5;
-        questionBox.setAttribute('style', 'display: none');
-        formDiv.setAttribute('style', 'display: block');
-        timeLeft = 0;
+        event.stopPropagation();
+        target.setAttribute('style', 'background-color: red');
+        setTimeout(function () {
+            q5Incorrect(event);
+        }, 500)
+
+        console.log(scoreData);
     } else if (state === "correct") {
+        event.stopPropagation();
         scoreData = scoreData + 1;
-        questionBox.setAttribute('style', 'display: none');
-        questionBox.nextElementSibling.setAttribute('style', 'display: block');
+        target.setAttribute('style', 'background-color: green');
+        setTimeout(function () {
+            answerCorrect(event);
+        }, 500)
+
+        console.log(scoreData);
+    } else if (state === "wrong") {
+        event.stopPropagation();
+        target.setAttribute('style', 'background-color: red');
+        setTimeout(function () {
+            answerIncorrect(event);
+        }, 500)
+        console.log(scoreData);
     } else {
-        timeLeft = timeLeft - 5;
-        questionBox.setAttribute('style', 'display: none');
-        questionBox.nextElementSibling.setAttribute('style', 'display: block');
+        return;
     }
 });
 
@@ -76,6 +124,6 @@ saveInfoBtn.addEventListener('click', function () {
     if (initialsInput.value != scoreData) {
         alert('Be honest about your score, no-one likes a cheater');
     } else {
-    localStorage.setItem('userInfo', JSON.stringify(userInfo));
-}
-});
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    }
+}); 
