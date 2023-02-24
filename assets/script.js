@@ -122,4 +122,4 @@ saveInfoBtn.addEventListener('click', function () {
         score: scoreInput.value
     }
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
-}); 
+});
